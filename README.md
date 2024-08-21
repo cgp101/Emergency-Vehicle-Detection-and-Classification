@@ -19,5 +19,5 @@ Files
     Contains a collection of videos of emergency vehicles used for testing the model's performance.
 
 Output screenshots
-![Police car ]()
+![Police car]
 <img width="956" alt="police_car" src="https://github.com/user-attachments/assets/6e35a914-576e-472b-94c8-bd29488c6575">
