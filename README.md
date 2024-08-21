@@ -5,7 +5,7 @@ The project uses a trained MobileNetV2 model to accurately identify vehicles lik
 # Files
   1. Emergency_vehicles.ipynb is the main Python notebook containing the entire Emergency Vehicle Detection and Classification project workflow, including data preprocessing, model  training, evaluation, and real-time application implementation. This is the main notebook. 
   2. resize_and_update.ipynb notebook contains the script that automates image resizing and updates CSV files, ensuring consistent dimensions for smoother model training and evaluation processes.
-  3. Dataset folder
+  3. Dataset folder ( Train-test folder )
      a. Train.csv and test.csv from Kaggle's Emergency Vehicles Identification
      b. Train_vt.csv is created from the above train.csv ( See Emergency_vehicles.ipynb for a detailed explanation of data used in this project.
   4. Video_tester folder
