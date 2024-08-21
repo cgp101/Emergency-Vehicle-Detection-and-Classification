@@ -17,3 +17,6 @@ Files
 
     Video_tester Folder
     Contains a collection of videos of emergency vehicles used for testing the model's performance.
+
+Output screenshots
+![Police car ](/Users/cgp/Desktop/police_car.png)
