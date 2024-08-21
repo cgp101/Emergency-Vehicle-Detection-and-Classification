@@ -28,4 +28,4 @@ Ambulance
 Fire truck
 <img width="949" alt="firetruck" src="https://github.com/user-attachments/assets/4b042066-8d07-4200-8fac-868dcedc5f50">
 
-Note: The discrepancy in confidence scores between the OpenCV window and the notification is due to the way the screenshot captures the window
+Note: The discrepancy in confidence scores between the OpenCV window and the notification is due to the timing issue in capturing the exact frame being displayed by the screenshot tool.
