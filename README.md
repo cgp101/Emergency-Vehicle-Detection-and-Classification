@@ -18,7 +18,7 @@ Files
     Video_tester Folder
     Contains a collection of videos of emergency vehicles used for testing the model's performance.
 
-Output screenshots
+Output screenshots 
 Police car
 <img width="956" alt="police_car" src="https://github.com/user-attachments/assets/6e35a914-576e-472b-94c8-bd29488c6575">
 
@@ -27,3 +27,5 @@ Ambulance
 
 Fire truck
 <img width="949" alt="firetruck" src="https://github.com/user-attachments/assets/4b042066-8d07-4200-8fac-868dcedc5f50">
+
+Note: The discrepancy in confidence scores between the OpenCV window and the notification is due to the way the screenshot captures the window
