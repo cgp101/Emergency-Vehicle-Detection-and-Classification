@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Vehicle Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='siren.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Vehicle Detection</h1>
+        
+        <h2>Upload an Image</h2>
+        <form id="uploadForm" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/jpeg" required>
+            <br>
+            <input type="submit" value="Upload Image">
+        </form>
+
+        <div id="result" style="display:none;">
+            <h2>Prediction Result</h2>
+            <p>Prediction Time: <span id="predictionTime"></span></p>
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="max-width: 400px;">
+            <p id="prediction"></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#uploadForm').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '/upload_image',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+                    $('#result').show();
+                    $('#uploadedImage').attr('src', 'data:image/jpeg;base64,' + data.image_data);
+                    $('#prediction').text('Predicted Class: ' + data.predicted_class + ' (Confidence: ' + data.confidence_score + ')');
+                    $('#predictionTime').text(data.prediction_time);
+                },
+                error: function() {
+                    alert('An error occurred while uploading the image.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
